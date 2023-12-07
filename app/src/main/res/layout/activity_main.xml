@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <Chronometer
+        android:id="@+id/tvKronometre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="125dp"
+        android:text="@string/_00_00"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageViewStart"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="55dp"
+        android:contentDescription="@drawable/start"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvKronometre"
+        app:srcCompat="@drawable/start" />
+
+    <ImageView
+        android:id="@+id/imageViewReset"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@drawable/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewStart"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewStart"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewStart"
+        app:srcCompat="@drawable/reset" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:textSize="34sp"
+        android:visibility="visible"
+        android:textStyle="bold"
+        android:background="@drawable/buttonarkaplan"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewStart"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewStart"
+        app:layout_constraintStart_toStartOf="@+id/imageViewStart"
+        app:layout_constraintTop_toTopOf="@+id/imageViewStart" />
+
+    <Button
+        android:id="@+id/buttonPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonarkaplan"
+        android:text="@string/pause"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewStart"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewStart"
+        app:layout_constraintStart_toStartOf="@+id/imageViewStart"
+        app:layout_constraintTop_toTopOf="@+id/imageViewStart" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonarkaplan"
+        android:text="@string/reset"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewReset"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewReset"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="@+id/imageViewReset"
+        app:layout_constraintTop_toTopOf="@+id/imageViewReset"
+        app:layout_constraintVertical_bias="0.493" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
